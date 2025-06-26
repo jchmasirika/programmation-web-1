@@ -1,0 +1,1 @@
+// Ce fichier contient le code JavaScript pour le projet. Il peut inclure des fonctionnalités interactives, comme des animations ou des validations de formulaire.

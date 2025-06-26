@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Cours de Programmation Web 1</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Menu fixe */
+        #sideMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            overflow-y: auto;
+            z-index: 1050;
+            display: none; /* Cacher par défaut sur petits écrans */
+        }
+
+        #sideMenu.show {
+            display: block;
+        }
+
+        /* Bouton pour afficher le menu */
+        #menuToggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1100;
+            display: none; /* Visible uniquement sur petits écrans */
+        }
+
+        /* Bouton pour remonter en haut */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1100;
+            display: none;
+        }
+
+        /* Toujours visible sur grands écrans */
+        @media (min-width: 992px) {
+            #sideMenu {
+                display: block;
+            }
+            #menuToggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-1" style="margin-left: 260px;">
+        <h1 class="h6">Concepts fondamentaux de la programmation web</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-left: 260px;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                Cours Web 1
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="chapitres/chapitre1.html">Chapitre 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chapitres/chapitre2.html">Chapitre 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chapitres/chapitre3.html">Chapitre 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chapitres/chapitre4.html">Chapitre 4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-3">
+            <!-- Menu fixe -->
+            <nav">
+                <h5>Concepts Clés</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#internet">1. Fonctionnement d'Internet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#www">2. Fonctionnement du World Wide Web</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#client-serveur">3. Modèle Client-Serveur</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#protocoles">4. Protocoles de Communication</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#outils">5. Outils de Développement</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="container my-5 col-9" style="margin-left: 260px;">
+            
+            <!-- Section Concepts -->
+            <section id="internet" class="my-5">
+                <h2>1. Fonctionnement d'Internet</h2>
+                <p>Internet est un réseau mondial d'ordinateurs interconnectés qui communiquent entre eux via des protocoles standardisés. Il permet l'échange de données, l'accès à des ressources distantes et la communication en temps réel. Les données sont transmises sous forme de paquets via des infrastructures comme les câbles, les satellites et les réseaux sans fil.</p>
+            </section>
+            <section id="www" class="my-5">
+                <h2>2. Fonctionnement du World Wide Web</h2>
+                <p>Le World Wide Web (WWW) est un système d'information basé sur Internet qui utilise des pages web interconnectées via des hyperliens. Les pages web sont accessibles grâce à des navigateurs web et sont hébergées sur des serveurs. Le WWW repose sur des technologies comme HTML, CSS et JavaScript pour afficher du contenu interactif.</p>
+            </section>
+            <section id="client-serveur" class="my-5">
+                <h2>3. Modèle Client-Serveur</h2>
+                <p>Le modèle client-serveur est une architecture où un client (comme un navigateur web) envoie des requêtes à un serveur, qui répond avec les données demandées. Le frontend représente la partie visible par l'utilisateur (interface utilisateur), tandis que le backend gère la logique, les bases de données et les traitements côté serveur.</p>
+            </section>
+            <section id="protocoles" class="my-5">
+                <h2>4. Protocoles de Communication</h2>
+                <p>HTTP (HyperText Transfer Protocol) est un protocole utilisé pour transférer des données sur le web. HTTPS est une version sécurisée de HTTP qui utilise le chiffrement pour protéger les données échangées entre le client et le serveur, garantissant ainsi la confidentialité et l'intégrité des informations.</p>
+            </section>
+            <section id="outils" class="my-5">
+                <h2>5. Outils de Développement</h2>
+                <p>Les outils de développement sont essentiels pour créer et tester des applications web. Parmi eux :</p>
+                <ul>
+                    <li><strong>VS Code</strong> : Un éditeur de code puissant et extensible pour le développement web.</li>
+                    <li><strong>Google Chrome</strong> : Un navigateur avec des outils de développement intégrés pour déboguer et tester des sites web.</li>
+                    <li><strong>Acode</strong> : Une application mobile pour éditer du code directement sur Android.</li>
+                </ul>
+            </section>
+
+            <!-- Section Ce que vous allez apprendre -->
+            <section class="container my-5">
+                <h2 class="text-center mb-4">Ce que vous allez apprendre dans ce cours</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h5>1. Les bases du HTML</h5>
+                            <p>Apprenez à structurer une page web avec les balises HTML et à créer des documents bien organisés.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h5>2. Styliser avec CSS</h5>
+                            <p>Découvrez comment utiliser CSS pour ajouter des styles, des couleurs et des mises en page modernes à vos pages web.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h5>3. Introduction à JavaScript</h5>
+                            <p>Initiez-vous à la programmation avec JavaScript pour rendre vos pages interactives et dynamiques.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h5>4. Comprendre le modèle client-serveur</h5>
+                            <p>Explorez comment les navigateurs et les serveurs communiquent pour afficher des pages web.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h5>5. Utiliser des outils de développement</h5>
+                            <p>Découvrez des outils comme VS Code, Chrome DevTools et Acode pour améliorer votre productivité.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 border rounded bg-light">
+                            <h5>6. Réaliser des projets pratiques</h5>
+                            <p>Appliquez vos connaissances en réalisant des projets concrets pour renforcer vos compétences.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapitres du Cours -->
+            <div class="col-12">
+                <h3>6. Chapitres du Cours</h3>
+            </div>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chapitre 1: Introduction à HTML</h5>
+                            <p class="card-text">Découvrez les bases de la structure des pages web avec HTML.</p>
+                            <a href="chapitres/chapitre1.html" class="btn btn-primary mt-auto">Lire le chapitre</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chapitre 2: CSS et Style</h5>
+                            <p class="card-text">Apprenez à styliser vos pages web avec CSS.</p>
+                            <a href="chapitres/chapitre2.html" class="btn btn-primary mt-auto">Lire le chapitre</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chapitre 3: JavaScript de Base</h5>
+                            <p class="card-text">Initiez-vous à la programmation avec JavaScript.</p>
+                            <a href="chapitres/chapitre3.html" class="btn btn-primary mt-auto">Lire le chapitre</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Chapitre 4: Projets Pratiques</h5>
+                            <p class="card-text">Mettez en pratique vos connaissances avec des projets.</p>
+                            <a href="chapitres/chapitre4.html" class="btn btn-primary mt-auto">Lire le chapitre</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3" style="margin-left: 260px;">
+        <p>&copy; 2025 Cours de Programmation Web 1. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bouton pour remonter en haut -->
+    <button id="scrollTopBtn" class="btn btn-primary">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Gestion du menu sur petits écrans
+        const menuToggle = document.getElementById('menuToggle');
+        const sideMenu = document.getElementById('sideMenu');
+        menuToggle.addEventListener('click', () => {
+            sideMenu.classList.toggle('show');
+        });
+
+        // Bouton pour remonter en haut
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Cacher le bouton menu quand on scroll vers le bas
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScrollTop) {
+                menuToggle.style.display = 'none';
+            } else {
+                menuToggle.style.display = 'block';
+            }
+            lastScrollTop = currentScroll;
+        });
+    </script>
+</body>
+</html>
